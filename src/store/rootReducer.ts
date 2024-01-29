@@ -1,4 +1,4 @@
-//libs
+//deps
 import { combineReducers } from "@reduxjs/toolkit";
 //api
 import { swapiApi } from "../services/swapiApi";

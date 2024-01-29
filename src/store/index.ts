@@ -1,6 +1,9 @@
+//deps
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+//types
 import { T_RootState, T_AppDispatch } from "./types";
+//rootReducer
 import { rootReducer } from "./rootReducer";
 //api
 import { swapiApi } from "../services/swapiApi";

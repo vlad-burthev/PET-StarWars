@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  grid-template:
+    "leftbar main ." 1fr
+    "leftbar footer ." minmax(50px, auto) / auto minmax(320px, 1400px) auto;
+
+  gap: 30px;
+  height: 100vh;
+}
+
+.main {
+  grid-area: main;
+  padding-top: 5rem;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.leftbar {
+  grid-area: leftbar;
+}

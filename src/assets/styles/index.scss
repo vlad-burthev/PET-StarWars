@@ -1,2 +1,15 @@
-@import "./reset.scss";
+//styles
 @import "./variables.scss";
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&display=swap");
+
+body {
+  margin: 0;
+
+  font-family: "Chakra Petch", sans-serif;
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 400;
+
+  background-color: $bg-color-primary;
+}

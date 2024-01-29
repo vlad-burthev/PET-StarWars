@@ -1,8 +1,9 @@
-//libs
+//deps
 import React from "react";
 import ReactDOM from "react-dom/client";
 //styles
 import "./assets/styles/index.scss";
+import "./assets/styles/reset.scss";
 //components
 import App from "./App";
 //providers
