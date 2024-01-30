@@ -15,7 +15,11 @@ const CatalogList: FC<CatalogListProps> = ({ data }) => {
     <div className={styles.list}>
       {data &&
         data.map((item: any) => (
-          <CatalogListItem key={item.url} url={item.url} name={item.name} />
+          <CatalogListItem
+            key={item.url}
+            url={item.url}
+            name={item.name || item.title}
+          />
         ))}
     </div>
   );

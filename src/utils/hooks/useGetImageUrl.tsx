@@ -5,6 +5,6 @@ export const useGetImageUrl = (url: string) => {
   const match = url.match(regex);
 
   const endpoint = match![1] === "people" ? "characters" : match![1];
-  const id = parseInt(match![2]);
-  return `${IMAGE_API}/${endpoint}/${id}.jpg`;
+  const id = match![2];
+  return { id, imgUrl: `${IMAGE_API}/${endpoint}/${id}.jpg` };
 };

@@ -2,7 +2,8 @@
   display: grid;
   grid-template:
     "leftbar main ." 1fr
-    "leftbar footer ." minmax(50px, auto) / auto minmax(320px, 1400px) auto;
+    "leftbar footer ." minmax(50px, auto) / auto minmax(320px, 1200px)
+    auto;
 
   gap: 30px;
   height: 100vh;
