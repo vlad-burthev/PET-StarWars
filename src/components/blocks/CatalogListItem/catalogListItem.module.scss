@@ -11,10 +11,13 @@
 
   &:hover {
     border-color: $yellow-color;
-    background-color: $primary-color-light;
+
+    .image,
     .image img {
       transform: scale(1.2);
+      border-radius: 20px;
     }
+
     .image::before {
       background-color: transparent;
     }
@@ -25,15 +28,27 @@
   }
 }
 
+.image-error {
+  width: 150px;
+  height: 150px;
+  color: red;
+  border: 1px solid red;
+  background-color: snow;
+  text-align: center;
+}
+
 .image {
   position: relative;
   width: 150px;
   height: 150px;
 
-  background-position: center center;
-  background-size: contain;
+  background-size: cover;
+  background-clip: border-box;
+  background-position: center top;
+
   border-radius: 50%;
   overflow: hidden;
+  transition: 0.3s;
 
   &::before {
     transition: 0.2s;
@@ -42,19 +57,19 @@
     width: 110%;
     left: -5%;
     height: 20px;
+    z-index: 1;
     top: 50%;
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.339);
     filter: blur(5px);
-    z-index: -1;
-    animation: rotateBorder 5s infinite linear;
+    animation: rotateBorder 2s infinite linear;
   }
 
   & img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    object-fit: cover;
     aspect-ratio: 1/1;
+    object-fit: cover;
     transition: 0.2s;
 
     padding: 5px;
@@ -63,10 +78,10 @@
 
 @keyframes rotateBorder {
   from {
-    transform: rotate(0deg);
+    transform: rotate(-45deg) translateY(-100px);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-45deg) translateY(70px);
   }
 }
 

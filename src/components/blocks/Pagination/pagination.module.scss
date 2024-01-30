@@ -1,0 +1,27 @@
+@import "../../../assets/styles/variables.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+
+  & button {
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &.active {
+      color: $yellow-color;
+      border-color: $yellow-color;
+    }
+  }
+}

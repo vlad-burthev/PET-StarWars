@@ -20,10 +20,11 @@ export const swapiApi = createApi({
     }),
     fetchSingleDataById: build.query({
       query: ({ endpoint, id }) => ({
-        url: `${endpoint}/${id}`,
+        url: `${endpoint === "characters" ? "people" : endpoint}/${id}`,
       }),
     }),
   }),
 });
 
-export const { useFetchDataByEndpointQuery } = swapiApi;
+export const { useFetchDataByEndpointQuery, useFetchSingleDataByIdQuery } =
+  swapiApi;

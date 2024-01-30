@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 //styles
 import styles from "./leftbar.module.scss";
 //paths
-import { paths } from "../../Routes/paths";
+import { paths } from "../../routes/paths";
 //icons
 import LogoIcon from "./icons/logo.svg?react";
 

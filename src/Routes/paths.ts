@@ -8,17 +8,17 @@ const PlanetSinglePage = lazy(() => import("../pages/PlanetSinglePage"));
 
 export const paths = [
   {
-    route: "species",
-    SingleComponent: SpecieSinglePage,
-  },
-  { route: "films", SingleComponent: FilmSlinglePage },
-  {
     route: "characters",
     SingleComponent: CharacterSinglePage,
   },
-  { route: "starships", SingleComponent: ShipSinglePage },
+  { route: "films", SingleComponent: FilmSlinglePage },
+  {
+    route: "species",
+    SingleComponent: SpecieSinglePage,
+  },
   {
     route: "planets",
     SingleComponent: PlanetSinglePage,
   },
+  { route: "starships", SingleComponent: ShipSinglePage },
 ];

@@ -1,0 +1,42 @@
+@import "../../assets/styles/variables.scss";
+
+.page {
+}
+
+.content {
+}
+
+.personal-info {
+  background-color: $primary-color-light;
+  display: flex;
+  width: max-content;
+  color: $black-color;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid $white-color;
+  }
+}
+
+.personal-info__list {
+  & li {
+    & span {
+      color: $yellow-color;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}
