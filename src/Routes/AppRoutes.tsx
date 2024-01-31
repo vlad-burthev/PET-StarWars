@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { paths } from "./paths";
 import Layout from "../layout";
 const CatalogPage = lazy(() => import("../pages/CatalogPage"));
+const SinglePage = lazy(() => import("../pages/SinglePage"));
 
 const AppRoutes: FC = () => {
   return (
@@ -10,10 +11,10 @@ const AppRoutes: FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element="home page" />
-          {paths.map(({ route, SingleComponent }: any) => (
+          {Object.values(paths).map((route: any) => (
             <Fragment key={route}>
               <Route path={route} element={<CatalogPage />} />
-              <Route path={route + "/:id"} element={<SingleComponent />} />;
+              <Route path={route + "/:id"} element={<SinglePage />} />;
             </Fragment>
           ))}
         </Route>

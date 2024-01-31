@@ -2,7 +2,7 @@
 
 .leftbar {
   position: relative;
-  padding: 0px 20px;
+  background-color: $primary-color;
 }
 
 .content {
@@ -12,16 +12,10 @@
 
   width: max-content;
 
-  border: 5px solid rgba(255, 250, 250, 0.351);
-  border-radius: 10px;
   transition: 0.2s;
 
   padding: 20px;
   backdrop-filter: blur(10px);
-
-  &:hover {
-    box-shadow: 0 0 10px rgba(255, 250, 250, 0.326);
-  }
 }
 
 .logo {
@@ -32,7 +26,7 @@
     justify-content: center;
     align-items: center;
 
-    color: $yellow-color;
+    color: $black-color;
     font-size: 36px;
 
     svg {
@@ -55,6 +49,7 @@ ul {
       width: 100%;
       transition: 0.3s;
       font-size: 24px;
+      color: $black-color;
 
       &::before {
         opacity: 0;
@@ -84,7 +79,7 @@ ul {
       }
 
       &:hover:not(.active) {
-        background-color: $black-color;
+        background-color: $primary-color-light;
       }
     }
   }

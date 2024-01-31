@@ -70,6 +70,8 @@
     height: 150px;
     aspect-ratio: 1/1;
     object-fit: cover;
+    object-position: center 20%;
+
     transition: 0.2s;
 
     padding: 5px;
@@ -81,7 +83,7 @@
     transform: rotate(-45deg) translateY(-100px);
   }
   to {
-    transform: rotate(-45deg) translateY(70px);
+    transform: rotate(-45deg) translateY(90px);
   }
 }
 

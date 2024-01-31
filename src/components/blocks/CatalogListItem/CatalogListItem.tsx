@@ -31,7 +31,6 @@ const CatalogListItem: FC<CatalogListItemProps> = ({ name, url }) => {
           <div
             style={{
               display: loadingImg ? "none" : "block",
-              // backgroundImage: `url(${imgUrl})`,
             }}
             className={styles.image}
           >
