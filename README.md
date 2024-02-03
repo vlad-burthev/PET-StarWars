@@ -1,4 +1,5 @@
- Star Wars
+Star Wars
+deploy link - <a href="https://benevolent-eclair-5baffc.netlify.app/">https://benevolent-eclair-5baffc.netlify.app/</a> 
 
 This website was inspired by the exciting Star Wars universe, where every character, planet and event represents a unique element of this epic saga. My project aims to develop the richness and diversity of this galaxy by providing information about the characters, planets, ships and other elements of this fantasy world. I hope Star Wars fans will learn some interesting facts here and enjoy being immersed in this exciting space epic. "May the Force be with you!"
 
