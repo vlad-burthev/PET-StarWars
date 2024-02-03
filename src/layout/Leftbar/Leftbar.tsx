@@ -38,7 +38,7 @@ const Leftbar: FC = () => {
                   home
                 </NavLink>
               </li>
-              {Object.values(paths).map((route: string) => (
+              {Object.values(paths).map((route: any) => (
                 <li key={route}>
                   <NavLink
                     className={({ isActive }) =>
