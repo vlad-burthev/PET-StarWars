@@ -1,7 +1,7 @@
 //deps
 import { FC } from "react";
-//components
 import AppRoutes from "./routes/AppRoutes";
+//components
 
 export const App: FC = () => {
   return (
