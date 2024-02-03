@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 //styles
 import styles from "./leftbar.module.scss";
 //paths
-import { paths } from "../../routes/paths";
+import paths from "../../paths/paths";
 //icons
 import LogoIcon from "./icons/logo.svg?react";
 
@@ -38,7 +38,7 @@ const Leftbar: FC = () => {
                   home
                 </NavLink>
               </li>
-              {Object.values(paths).map((route: any) => (
+              {Object.values(paths).map((route: string) => (
                 <li key={route}>
                   <NavLink
                     className={({ isActive }) =>

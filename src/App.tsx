@@ -1,7 +1,7 @@
 //deps
 import { FC, Fragment, Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { paths } from "./routes/paths";
+import paths from "./paths/paths";
 //components
 const Layout = lazy(() => import("./layout"));
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -14,7 +14,7 @@ export const App: FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {Object.values(paths).map((route: any) => (
+          {Object.values(paths).map((route: string) => (
             <Fragment key={route}>
               <Route path={route} element={<CatalogPage />} />
               <Route path={route + "/:id"} element={<SinglePage />} />;
