@@ -1,6 +1,6 @@
-import { useState, type FC, useEffect, useMemo } from "react";
+import { useState, type FC } from "react";
 import { useFetchDataByEndpointQuery } from "../../services/swapiApi";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CatalogList from "../../components/blocks/CatalogList";
 import CatalogListSlceleton from "../../components/skeletons/CatalogListSlceleton";
 
