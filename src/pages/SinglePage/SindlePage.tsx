@@ -21,12 +21,14 @@ const SinglePage: FC<SinglePageProps> = () => {
     }
   }, [data]);
 
-  console.log(data);
-
   return (
     <>
       <Helmet>
-        <title>Star Wars: {data?.title || data?.name}</title>
+        <title>
+          {`Star Wars: ${
+            data !== undefined ? data?.title || data?.name : "single page"
+          }`}
+        </title>
       </Helmet>
       <section className={styles.page}>
         {isLoading ? (
