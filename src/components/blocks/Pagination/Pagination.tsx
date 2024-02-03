@@ -6,7 +6,7 @@ interface PaginationProps {
   setPage: (number: number) => void;
 }
 
-import styles from "./Pagination.module.scss";
+import styles from "./pagination.module.scss";
 
 const Pagination: FC<PaginationProps> = ({
   totalPages,
