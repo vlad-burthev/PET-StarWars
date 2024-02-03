@@ -7,6 +7,7 @@ import CatalogListSlceleton from "../../components/skeletons/CatalogListSlceleto
 //styles
 import styles from "./catalogPage.module.scss";
 import Pagination from "../../components/blocks/Pagination";
+import { Helmet } from "react-helmet-async";
 
 interface CatalogPageProps {}
 
@@ -21,27 +22,33 @@ const CatalogPage: FC<CatalogPageProps> = () => {
   });
 
   return (
-    <div>
-      {isLoading || isFetching ? (
-        <div className={styles["skeleton-wrapper"]}>
-          <CatalogListSlceleton
-            display={isLoading || isFetching ? "block" : "none"}
-          />
-        </div>
-      ) : (
-        <>
-          <CatalogList data={data?.results} />
+    <>
+      <Helmet>
+        <title>Star Wars: {pathname}</title>
+      </Helmet>
 
-          {data?.count > 10 && (
-            <Pagination
-              setPage={setPage}
-              currentPage={page}
-              totalPages={Math.ceil(data?.count / 10)}
+      <div>
+        {isLoading || isFetching ? (
+          <div className={styles["skeleton-wrapper"]}>
+            <CatalogListSlceleton
+              display={isLoading || isFetching ? "block" : "none"}
             />
-          )}
-        </>
-      )}
-    </div>
+          </div>
+        ) : (
+          <>
+            <CatalogList data={data?.results} />
+
+            {data?.count > 10 && (
+              <Pagination
+                setPage={setPage}
+                currentPage={page}
+                totalPages={Math.ceil(data?.count / 10)}
+              />
+            )}
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
