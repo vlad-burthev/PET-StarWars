@@ -1,6 +1,6 @@
-import { useState, type FC, useEffect } from "react";
+import { useState, type FC, useEffect, useMemo } from "react";
 import { useFetchDataByEndpointQuery } from "../../services/swapiApi";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import CatalogList from "../../components/blocks/CatalogList";
 import CatalogListSlceleton from "../../components/skeletons/CatalogListSlceleton";
 
@@ -12,15 +12,13 @@ interface CatalogPageProps {}
 
 const CatalogPage: FC<CatalogPageProps> = () => {
   const { pathname } = useLocation();
+
   const [page, setPage] = useState<number>(1);
+
   const { data, isLoading, isFetching } = useFetchDataByEndpointQuery({
     endpoint: pathname,
     page,
   });
-
-  useEffect(() => {
-    setPage(1);
-  }, [pathname]);
 
   return (
     <div>

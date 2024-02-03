@@ -8,6 +8,25 @@
   justify-content: center;
 }
 
+.homeworld {
+  width: max-content;
+}
+@media (max-width: 768px) {
+  .characters {
+    grid-template-columns: auto;
+
+    justify-content: center;
+  }
+  .personal-info {
+    flex-direction: column;
+    align-items: center;
+    max-width: min-content;
+  }
+  .avatar {
+    margin: 0;
+  }
+}
+
 .personal-info {
   padding: 20px;
   position: relative;

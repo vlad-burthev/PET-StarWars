@@ -1,0 +1,44 @@
+@import "../../assets/styles/variables.scss";
+
+.console {
+  background-color: #212121;
+  color: #bada55;
+  font-family: "Courier New", monospace;
+  overflow: hidden;
+}
+
+.console-header {
+  padding: 5px;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+}
+
+section > div:not(:first-child) {
+  margin: 50px 0;
+}
+
+.console-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  margin-left: 5px;
+}
+
+.console-content {
+  padding: 10px;
+  overflow-y: auto;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.info {
+  & a {
+    display: block;
+    width: max-content;
+    padding: 0px 10px;
+    background-color: $primary-color-light;
+  }
+}

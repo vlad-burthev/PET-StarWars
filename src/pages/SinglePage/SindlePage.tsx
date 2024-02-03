@@ -56,7 +56,7 @@ const SinglePage: FC<SinglePageProps> = () => {
                     </div>
                   </div>
                 ) : (
-                  <div>
+                  <div className={styles.homeworld}>
                     <h1>Homeworld</h1>
                     {data?.homeworld && <UniversalCard url={data?.homeworld} />}
                   </div>

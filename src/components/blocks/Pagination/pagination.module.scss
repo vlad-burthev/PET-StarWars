@@ -14,6 +14,7 @@
     padding: 10px 20px;
     transition: 0.3s;
     border: 2px solid transparent;
+    overflow: hidden;
 
     &:hover {
       border-color: $primary-color;
@@ -22,6 +23,17 @@
     &.active {
       color: $yellow-color;
       border-color: $yellow-color;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: 0;
+    justify-content: space-between;
+
+    & button {
+      padding: 0 6px;
     }
   }
 }

@@ -1,5 +1,5 @@
 //deps
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import { Link, NavLink } from "react-router-dom";
 //styles
 import styles from "./leftbar.module.scss";
@@ -9,39 +9,52 @@ import { paths } from "../../routes/paths";
 import LogoIcon from "./icons/logo.svg?react";
 
 const Leftbar: FC = () => {
+  const [toggleBar, setToggleBar] = useState(true);
   return (
-    <aside className={`${styles.leftbar} leftbar`}>
-      <div className={styles.content}>
-        <div className={styles.logo}>
-          <Link to={"/"}>
-            <span>StarWars</span>
-            <LogoIcon />
-          </Link>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? styles.active : "")}
-                to={"/"}
-              >
-                home
-              </NavLink>
-            </li>
-            {Object.values(paths).map((route: string) => (
-              <li key={route}>
+    <>
+      <button
+        onClick={() => setToggleBar((prev) => !prev)}
+        className={`${styles["btn__toggle"]} ${toggleBar ? styles.close : ""}`}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <aside className={`${styles.leftbar} leftbar`}>
+        <div className={`${styles.content} ${toggleBar ? styles.show : ""}`}>
+          <div className={styles.logo}>
+            <Link to={"/"}>
+              <span>StarWars</span>
+              <LogoIcon />
+            </Link>
+          </div>
+          <nav>
+            <ul>
+              <li>
                 <NavLink
                   className={({ isActive }) => (isActive ? styles.active : "")}
-                  to={route}
+                  to={"/"}
                 >
-                  {route}
+                  home
                 </NavLink>
               </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </aside>
+              {Object.values(paths).map((route: string) => (
+                <li key={route}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                    to={route}
+                  >
+                    {route}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </>
   );
 };
 
